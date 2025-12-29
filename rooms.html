@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>StayWell Hotel - Rooms</title>
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #fff;
+      color: #111;
+    }
+
+    .page {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #32577c;
+      color: #fff;
+      padding: 18px 16px;
+      text-align: center;
+    }
+
+    .site-nav {
+      background: #38628b;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      padding: 10px;
+    }
+    .site-nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: 6px;
+    }
+    .site-nav a.active {
+      background: rgba(255,255,255,0.1);
+    }
+
+    /* Shared hero+content background */
+    .hero-content {
+      position: relative;
+      background: url('background.jpg') center/cover no-repeat;
+      flex: 1;
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+    }
+    .hero-content::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.4); /* dark overlay for readability */
+      z-index: 0;
+    }
+    .hero-content > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-content h2 {
+      font-size: clamp(1.5rem, 3vw, 2.5rem);
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+      margin-bottom: 20px;
+    }
+
+    .rooms {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .room {
+      background: rgba(255,255,255,0.85); /* translucent card */
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+      padding: 14px;
+      text-align: left;
+      width: clamp(240px, 30%, 320px);
+      color: #111;
+    }
+
+    .room img {
+      width: 100%;
+      height: auto;
+      max-height: 180px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+
+    .room h3 {
+      margin: 6px 0;
+    }
+
+    .room ul {
+      padding-left: 18px;
+      margin: 6px 0;
+    }
+
+    .room ul li {
+      margin-bottom: 4px;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      background: #32577c;
+      color: #fff;
+      text-align: center;
+      padding: 12px;
+    }
+
+    @media (max-width: 560px) {
+      .room { width: 100%; }
+      .room img { max-height: 140px; }
+    }
+    @media (min-width: 561px) and (max-width: 900px) {
+      .room { width: 45%; }
+    }
+    @media (min-width: 901px) {
+      .room { width: 30%; }
+    }
+  </style>
+</head>
+
+<body>
+<div class="page">
+
+  <header>
+    <h1>StayWell Hotel</h1>
+    <p style="margin:6px 0 0; font-weight:600;">Your comfort is our priority</p>
+  </header>
+
+  <nav class="site-nav">
+    <a href="index.html">Home</a>
+    <a href="rooms.html" class="active">Rooms</a>
+    <a href="booking.html">Booking</a>
+    <a href="restaurant.html">Restaurant</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="contact.html">Contact</a>
+    <a href="about.html">About</a>
+  </nav>
+
+  <!-- Hero + mid content with shared background -->
+  <div class="hero-content">
+    <h2>Discover Our Rooms</h2>
+
+    <div class="rooms">
+      <div class="room">
+        <img src="standardroom.jpg" alt="Standard Room">
+        <h3>Standard Room</h3>
+        <p>Comfortable and budget‑friendly with essential amenities.</p>
+        <ul>
+          <li>Queen‑size bed</li>
+          <li>Air conditioning</li>
+          <li>Free Wi‑Fi</li>
+          <li>Attached bathroom</li>
+        </ul>
+      </div>
+
+      <div class="room">
+        <img src="deluxeroom.jpg" alt="Deluxe Room">
+        <h3>Deluxe Room</h3>
+        <p>Spacious room with premium furnishings and a relaxing ambience.</p>
+        <ul>
+          <li>King‑size bed</li>
+          <li>City view balcony</li>
+          <li>Smart TV + Wi‑Fi</li>
+          <li>Mini‑fridge & coffee maker</li>
+        </ul>
+      </div>
+
+      <div class="room">
+        <img src="suiteroom.jpg" alt="Suite Room">
+        <h3>Suite</h3>
+        <p>Elegant suite with a private living area and top‑tier comfort.</p>
+        <ul>
+          <li>Separate living room</li>
+          <li>Luxury bathroom</li>
+          <li>Complimentary breakfast</li>
+          <li>24/7 room service</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <footer>&copy; 2025 StayWell Hotel. All rights reserved.</footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>StayWell Hotel - Contact</title>
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #fff;
+      color: #111;
+    }
+
+    .page {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #32577c;
+      color: #fff;
+      padding: 18px 16px;
+      text-align: center;
+    }
+
+    .site-nav {
+      background: #38628b;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      padding: 10px;
+    }
+    .site-nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: 6px;
+    }
+    .site-nav a.active {
+      background: rgba(255,255,255,0.1);
+    }
+
+    /* Shared hero+content background */
+    .hero-content {
+      position: relative;
+      background: url('background.jpg') center/cover no-repeat;
+      flex: 1;
+      min-height: 76.1vh;
+      text-align: center;
+      color: #fff;
+    }
+    .hero-content::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.4); /* dark overlay for readability */
+      z-index: 0;
+    }
+    .hero-content > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-content h2 {
+      font-size: clamp(1.5rem, 3vw, 2.5rem);
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+      margin-bottom: 20px;
+    }
+
+    .contact-box {
+      max-width: 400px;
+      margin: 0 auto;
+      background: rgba(255,255,255,0.9); /* translucent card */
+      padding: 18px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+      text-align: left;
+      color: #111;
+    }
+
+    .contact-box label {
+      font-weight: 600;
+      display: block;
+      margin: 10px 0 4px;
+    }
+
+    .contact-box input,
+    .contact-box textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    .contact-box textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .contact-box button {
+      width: 100%;
+      margin-top: 16px;
+      padding: 10px;
+      background: #32577c;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .info {
+      margin-top: 20px;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      background: rgba(255,255,255,0.9); /* translucent card */
+      padding: 12px;
+      border-radius: 8px;
+      color: #111;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    footer {
+      background: #32577c;
+      color: #fff;
+      text-align: center;
+      padding: 12px;
+    }
+
+    @media (max-width: 560px) {
+      .contact-box, .info {
+        width: 100%;
+        padding: 14px;
+      }
+    }
+    @media (min-width: 561px) and (max-width: 900px) {
+      .contact-box, .info {
+        width: 80%;
+      }
+    }
+    @media (min-width: 901px) {
+      .contact-box, .info {
+        width: 400px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<div class="page">
+
+  <header>
+    <h1>StayWell Hotel</h1>
+    <p style="margin:6px 0 0; font-weight:600;">Your comfort is our priority</p>
+  </header>
+
+  <nav class="site-nav">
+    <a href="index.html">Home</a>
+    <a href="rooms.html">Rooms</a>
+    <a href="booking.html">Booking</a>
+    <a href="restaurant.html">Restaurant</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="contact.html" class="active">Contact</a>
+    <a href="about.html">About</a>
+  </nav>
+
+  <!-- Hero + mid content with shared background -->
+  <div class="hero-content">
+    <h2>Contact Us</h2>
+
+    <div class="contact-box">
+      <label>Your Name</label>
+      <input type="text" placeholder="Enter your name">
+
+      <label>Email</label>
+      <input type="email" placeholder="Enter your email">
+
+      <label>Message</label>
+      <textarea placeholder="Write your message"></textarea>
+
+      <button>Send Message</button>
+    </div>
+
+    <div class="info">
+      <p><strong>Phone:</strong> +91 98765 43210</p>
+      <p><strong>Email:</strong> support@staywellhotel.com</p>
+      <p><strong>Address:</strong> StayWell Hotel, Lucknow, Uttar Pradesh</p>
+    </div>
+  </div>
+
+  <footer>&copy; 2025 StayWell Hotel. All rights reserved.</footer>
+
+</div>
+</body>
+</html>
